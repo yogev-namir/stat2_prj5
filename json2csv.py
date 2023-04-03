@@ -1,4 +1,12 @@
 import json
+
+def metric_units(key, v):
+    if key == 'height':
+
+    elif key == 'weight':
+
+    else
+        return v
 def flatten_dict(d, parent_key='', sep='.'):
     items = []
     if isinstance(d, list):
@@ -15,6 +23,7 @@ def flatten_dict(d, parent_key='', sep='.'):
             elif isinstance(v, list):
                 items.extend(flatten_dict(v, new_key, sep).items())
             else:
+                v = metric_units(new_key, v)
                 items.append((new_key, v))
     return dict(items)
 
